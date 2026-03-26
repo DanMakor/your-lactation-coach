@@ -4,7 +4,7 @@ import path from 'path';
 import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { backgroundImageShortcode, imageShortcode } from './src/_includes/image.js';
 
 export default function (eleventyConfig) {
   //compile tailwind before eleventy processes the files
@@ -38,26 +38,14 @@ export default function (eleventyConfig) {
     }),
   ]);
 
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    // output image formats
-    formats: ["avif", "webp", "jpeg"],
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addNunjucksAsyncShortcode("bgImage", backgroundImageShortcode);
 
-    // output image widths
-    widths: ["auto"],
-
-    // optional, attributes assigned on <img> nodes override these values
-    htmlOptions: {
-        imgAttributes: {
-            loading: "lazy",
-            decoding: "async",
-        },
-        pictureAttributes: {}
-    },
-  });
-
-  eleventyConfig.addPassthroughCopy({ 'src/assets/images': 'assets/images' });
 
   return {
-    dir: { input: 'src', output: 'dist' },
+    dir: {
+      input: 'src',
+      output: 'dist'
+    }
   };
 }

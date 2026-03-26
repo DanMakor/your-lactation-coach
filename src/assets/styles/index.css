@@ -2,4 +2,49 @@
 
 @theme {
     --font-serif: 'PT Serif', serif;
+    --color-warm-gray: rgb(133 119 103); /* custom gray */
+    --color-warm-gray-light: rgb(170 156 140); /* lighter warm gray */
+    --color-gray: rgb(133 119 103); /* optional global gray */
+    --color-natural: rgb(238, 221, 216);
+}
+
+#mobile-menu {
+  inset: 0 0 0 auto;
+  opacity: 0;
+  transform: translateX(100%);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    overlay 0.3s ease allow-discrete,
+    display 0.3s ease allow-discrete;
+}
+
+#mobile-menu[open] {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#mobile-menu[open] {
+  @starting-style {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+#mobile-menu::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition:
+    background 0.3s ease,
+    overlay 0.3s ease allow-discrete,
+    display 0.3s ease allow-discrete;
+}
+
+#mobile-menu[open]::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#mobile-menu[open]::backdrop {
+  @starting-style {
+    background: rgba(0, 0, 0, 0);
+  }
 }
