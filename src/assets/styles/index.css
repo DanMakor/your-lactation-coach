@@ -5,7 +5,13 @@
     --color-warm-gray: rgb(133 119 103); /* custom gray */
     --color-warm-gray-light: rgb(170 156 140); /* lighter warm gray */
     --color-gray: rgb(133 119 103); /* optional global gray */
-    --color-natural: rgb(238, 221, 216);
+
+    --color-natural-dark: rgb(238, 221, 216);
+    --color-natural-light: rgb(242, 237, 230);
+
+    --color-pink: rgb(205, 150, 146);
+
+    --radius-5xl: 3rem;
 }
 
 #mobile-menu {
