@@ -24,8 +24,10 @@
             <li>
               <a href="/services/" class="font-bold transition-colors {% if currentUrl == '/services/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/services/' %}aria-current="page"{% endif %}>Services</a>
             </li>
-            <li><a href="#" class="font-bold">About Me</a></li>
-            <li><a href="#" class="font-bold">Contact Me</a></li>
+            <li>
+              <a href="/about/" class="font-bold transition-colors {% if currentUrl == '/about/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/about/' %}aria-current="page"{% endif %}>About Me</a>
+            </li>
+            <li><a href="/contact/" class="font-bold transition-colors {% if currentUrl == '/contact/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/contact/' %}aria-current="page"{% endif %}>Contact Me</a></li>
           </ul>
         </nav>
 
@@ -48,8 +50,10 @@
             <li>
               <a href="/services/" class="block py-2 transition-colors {% if currentUrl == '/services/' %}bg-natural rounded-lg text-warm-gray-light font-bold{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/services/' %}aria-current="page"{% endif %}>Services</a>
             </li>
-            <li><a href="#" class="block py-2 text-warm-gray transition-colors hover:text-gray-800">About Me</a></li>
-            <li><a href="#" class="block py-2 text-warm-gray transition-colors hover:text-gray-800">Contact Me</a></li>
+            <li>
+              <a href="/about/" class="block py-2 transition-colors {% if currentUrl == '/about/' %}bg-natural rounded-lg text-warm-gray-light font-bold{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/about/' %}aria-current="page"{% endif %}>About Me</a>
+            </li>
+            <li><a href="/contact/" class="block py-2 transition-colors {% if currentUrl == '/contact/' %}bg-natural rounded-lg text-warm-gray-light font-bold{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/contact/' %}aria-current="page"{% endif %}>Contact Me</a></li>
           </ul>
         </nav>
       </dialog>
