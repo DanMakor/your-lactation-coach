@@ -5,32 +5,29 @@ layout: layouts/base.njk
 ---
 
 <main class="bg-natural-light px-4 py-8 text-warm-gray">
-  <section class="container mx-auto max-w-4xl">
+  <section class="container mx-auto max-w-4xl flex flex-col items-center">
       <h1 class="mt-4 text-center text-5xl">Services</h1>
 
-        <div class="flex gap-8 flex-col">
-            <div>
-                <a href="/antenatal/" class="block mt-5 w-[260px] h-[260px] lg:min-w-[320px] lg:w-[320px] lg:h-[320px] rounded-5xl border-warm-gray-light border-2 overflow-hidden mx-auto transition-transform duration-200 hover:scale-[1.02] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-warm-gray-light focus-visible:ring-offset-2 focus-visible:ring-offset-natural-100">
+        <div class="flex gap-8 flex-col lg:flex-row mt-4">
+            <a href="/antenatal/" class="group mt-5 block w-full max-w-[360px] overflow-hidden rounded-5xl border-2 border-warm-gray-light bg-white p-0 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-warm-gray focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-warm-gray-light focus-visible:ring-offset-2 focus-visible:ring-offset-natural-100">
+                <div class="h-[260px] w-full overflow-hidden rounded-none border-0 lg:h-[320px]">
                     {% image "./src/assets/images/antenatal-services.jpg", "Woman with pregnant stomach", "320px", "object-cover object-center w-full h-full" %}
-                </a>
+                </div>
+                <div class="px-4 pb-4">
+                    <h2 class="mt-4 text-center text-2xl font-semibold transition-colors group-hover:text-warm-gray-light">Antenatal</h2>
+                    <p class="mt-2 text-center px-4">Prepare for breastfeeding before birth with practical, confidence-building guidance.</p>
+                </div>
+            </a>
 
-                <a href="/antenatal/" class="block mt-3 text-center text-2xl font-semibold transition-colors hover:text-warm-gray-light focus-visible:outline-none focus-visible:underline">
-                    <h2>Antenatal</h2>
-                </a>
-                <p class="mt-2 text-center px-8">Prepare for breastfeeding before birth with practical, confidence-building guidance.</p>
-            </div>
-
-
-            <div>
-                <a href="/postnatal/" class="block mt-5 w-[260px] h-[260px] lg:min-w-[320px] lg:w-[320px] lg:h-[320px] rounded-5xl border-warm-gray-light border-2 overflow-hidden mx-auto transition-transform duration-200 hover:scale-[1.02] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-warm-gray-light focus-visible:ring-offset-2 focus-visible:ring-offset-natural-100">
+            <a href="/postnatal/" class="group mt-5 block w-full max-w-[360px] overflow-hidden rounded-5xl border-2 border-warm-gray-light bg-white p-0 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:border-warm-gray focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-warm-gray-light focus-visible:ring-offset-2 focus-visible:ring-offset-natural-100">
+                <div class="h-[260px] w-full overflow-hidden rounded-none border-0 lg:h-[320px]">
                     {% image "./src/assets/images/postnatal-services.jpg", "Mother breastfeeding baby", "320px", "object-cover object-center w-full h-full" %}
-                </a>
-
-                <a href="/postnatal/" class="block mt-3 text-center text-2xl font-semibold transition-colors hover:text-warm-gray-light focus-visible:outline-none focus-visible:underline">
-                    <h2>Postnatal</h2>
-                </a>
-                <p class="mt-2 text-center px-8">Get support after birth for latch, comfort, milk supply, and feeding progress.</p>
-            </div>
+                </div>
+                <div class="px-4 pb-4">
+                    <h2 class="mt-4 text-center text-2xl font-semibold transition-colors group-hover:text-warm-gray-light">Postnatal</h2>
+                    <p class="mt-2 text-center px-4">Get support after birth for latch, comfort, milk supply, and feeding progress.</p>
+                </div>
+            </a>
         </div>
 
         <p class="font-bold mt-10 text-center">No referral is necessary for appointments, and consults are not dependant on place of delivery. 
