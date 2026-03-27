@@ -4,34 +4,184 @@ description: Postnatal lactation support for latch, milk supply, comfort, expres
 layout: layouts/base.njk
 ---
 
-<main class="bg-natural px-4 py-16 text-warm-gray">
-  <section class="container mx-auto max-w-5xl">
-    <div class="mx-auto max-w-3xl text-center">
-      <p class="font-sans text-sm font-bold uppercase tracking-[0.25em] text-warm-gray-light">Postnatal</p>
-      <h1 class="mt-4 text-5xl leading-tight">Support when feeding feels hard</h1>
-      <p class="mt-6 font-sans text-lg leading-8">Postnatal consultations focus on practical changes that reduce stress, improve comfort, and help you move toward the feeding experience you want.</p>
+<main class="bg-natural-light px-4 pb-8 text-warm-gray">
+  <div class="bg-pink text-white -mx-4 p-6 mb-8">
+    <p class="text-center">
+      <b>MEDICARE REBATES</b>, which means
+      <u>less out-of-pocket costs</u>
+      for you (available if your baby is less than 7 weeks old).
+    </p>
+  </div>
+  <section class="container mx-auto">
+    <h1 class="mt-4 text-center text-5xl">Postnatal</h1>
+    <div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-12 ">
+      <div class="mt-8 w-full h-[375px] lg:min-w-[500px] lg:w-[500px] lg:h-[550px] rounded-tr-full rounded-tl-full
+          border-warm-gray-light border-2 overflow-hidden">
+        {% image "./src/assets/images/postnatal.jpg", "Sleepy baby breastfeeding", "(min-width: 1280px) 640px, 320px", "object-cover object-center w-full h-full" %}
+      </div>
+      <div>
+        <h2 class="text-2xl font-light">Empowering you to nourish with confidence</h2>
+        <p class="mt-4">I support all feeding choices. Breastmilk is optimal, but your informed decision matters most.</p>
+        <p class="mt-4">Let’s work together so that nourishing your baby becomes something you look forward to.</p>
+        <p class="mt-4">I offer you support, treatment and management for a range of breastfeeding problems including:</p>
+        <ul class="mt-5 list-disc pl-8">
+          <li>Positioning and attachment issues</li>
+          <li>Sore and damaged nipples</li>
+          <li>Delayed lactation or low supply</li>
+          <li>Blocked ducts or mastitis</li>
+          <li>Raynaud's syndrome of the nipple</li>
+          <li>Thrush</li>
+          <li>Suck issues</li>
+          <li>Breast refusal</li>
+          <li>Previous breast surgery</li>
+          <li>Re-lactation advice</li>
+          <li>Tongue-tie assessment</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="mt-14 grid gap-6 md:grid-cols-2">
-      <article class="rounded-[2rem] border-2 border-warm-gray-light bg-white/70 p-8">
-        <h2 class="text-3xl">Latch and Pain Support</h2>
-        <p class="mt-4 font-sans leading-8">Identify root causes of painful feeds and implement practical adjustments to improve comfort quickly.</p>
+    <div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-12 ">
+      <div class="mt-8 w-full h-[375px] lg:min-w-[500px] lg:w-[500px] lg:h-[550px] rounded-tl-5xl rounded-br-5xl
+          border-warm-gray-light border-2 overflow-hidden ">
+        {% image "./src/assets/images/postnatal-two.jpg", "Alert baby breastfeeding", "(min-width: 1280px) 640px, 320px", "object-cover object-center w-full h-full" %}
+      </div>
+      <div>
+        <h2 class="mt-3 text-2xl font-light">What to expect at a postnatal consultation:</h2>
+        <ul class="mt-5 list-disc pl-8">
+          <li>Intake assessment — Discussion of your medical history, birth, and
+                                                baby’s health</li>
+          <li>Breast assessment
+          </li>
+          <li>Oral assessment of the baby
+          </li>
+          <li>Pre and post feeding weight check for baby
+          </li>
+          <li>Feeding observation
+          </li>
+          <li>Education on different nursing positions
+          </li>
+          <li>Education on latching and what to watch out for
+          </li>
+          <li>Flange fitting and pump education if necessary
+          </li>
+          <li>Summary of discussion
+          </li>
+          <li>Referrals as needed</li>
+        </ul>
+      </ul>
+    </div>
+  </section>
+  <section class="mt-8 container mx-auto bg-natural-dark rounded-5xl py-6 px-4 lg:p-12" aria-labelledby="pricing-heading">
+    <div class="flex flex-col items-center gap-4 lg:flex-row lg:justify-between lg:items-center">
+      <h2 class="text-4xl text-pink mt-2 text-center" id="pricing-heading">Postnatal consultation options & fees</h2>
+      <a
+        class="bg-pink mx-auto text-center px-18 py-3 text-white font-sans text-lg rounded-4xl font-bold lg:mx-0"
+        href="/contact/">
+        Book now</a>
+      
+    </div>
+    <p class="text-center mx-auto max-w-[800px] font-sans mt-4 mb-4">
+        <b>As an endorsed midwife, I can provide Medicare rebates up until the end of the sixth week post birth. After 7 weeks,
+          private health funds may offer some rebate depending on the fund and level of cover.</b>
+    </p>
+    <div class="mt-6 flex flex-col gap-4 lg:flex-row lg:gap-12">
+      <article class="lg:w-1/2">
+        <h3 class="text-xl">Initial Consultation</h3>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 inline-block text-warm-gray"
+            aria-hidden="true">
+            <path d="M12 2.75A9.25 9.25 0 1 0 21.25 12 9.26 9.26 0 0 0 12 2.75Zm3.28 12.37a.9.9 0 1 1-1.06 1.46l-2.55-1.85a.9.9 0 0
+            1-.37-.73V7.8a.9.9 0 0 1 1.8 0v5.74l2.18 1.58Z"/>
+          </svg>
+          90 - 120 minutes in home only</p>
+        <dl class="space-y-3 my-3 max-w-[400px]">
+          <div class="flex items-baseline gap-3">
+            <dt class="flex-1">In-home visit</dt>
+            <dd class="w-22 text-center shrink-0 px-4 py-2 bg-white rounded-xl">$250</dd>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <dt class="flex-1">Telehealth</dt>
+            <dd class="w-22 text-center shrink-0 px-4 py-2 bg-white rounded-xl">N/A</dd>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <dt class="flex-1">Medicare Rebate</dt>
+            <dd class="w-22 text-center shrink-0 px-4 py-2 bg-white rounded-xl">$162.60</dd>
+          </div>
+        </dl>
       </article>
-
-      <article class="rounded-[2rem] border-2 border-warm-gray-light bg-white/70 p-8">
-        <h2 class="text-3xl">Milk Supply Guidance</h2>
-        <p class="mt-4 font-sans leading-8">Work through low-supply or oversupply concerns with evidence-based strategies and realistic next steps.</p>
+      <article class="lg:w-1/2">
+        <h3 class="text-xl">Follow-up consultation</h3>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 inline-block text-warm-gray"
+            aria-hidden="true">
+            <path d="M12 2.75A9.25 9.25 0 1 0 21.25 12 9.26 9.26 0 0 0 12 2.75Zm3.28 12.37a.9.9 0 1 1-1.06 1.46l-2.55-1.85a.9.9 0 0
+            1-.37-.73V7.8a.9.9 0 0 1 1.8 0v5.74l2.18 1.58Z"/>
+          </svg>
+          40-60 minutes in-home or Telehealth</p>
+        <dl class="space-y-3 my-3 max-w-[400px]">
+          <div class="flex items-baseline gap-3">
+            <dt class="flex-1">In-home visit</dt>
+            <dd class="w-22 text-center shrink-0 px-4 py-2 bg-white rounded-xl">$150</dd>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <dt class="flex-1">Telehealth</dt>
+            <dd class="w-22 text-center shrink-0 px-4 py-2 bg-white rounded-xl">$120</dd>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <dt class="flex-1">Medicare Rebate</dt>
+            <dd class="w-22 text-center shrink-0 px-4 py-2 bg-white rounded-xl">$108.40</dd>
+          </div>
+        </dl>
       </article>
-
-      <article class="rounded-[2rem] border-2 border-warm-gray-light bg-white/70 p-8">
-        <h2 class="text-3xl">Expressing and Bottles</h2>
-        <p class="mt-4 font-sans leading-8">Get tailored help with pumping routines, bottle introduction, and combination feeding plans that fit your life.</p>
+      <article class="lg:w-1/2">
+        <h3 class="text-xl">Quick consultation</h3>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 inline-block text-warm-gray"
+            aria-hidden="true">
+            <path d="M12 2.75A9.25 9.25 0 1 0 21.25 12 9.26 9.26 0 0 0 12 2.75Zm3.28 12.37a.9.9 0 1 1-1.06 1.46l-2.55-1.85a.9.9 0 0
+            1-.37-.73V7.8a.9.9 0 0 1 1.8 0v5.74l2.18 1.58Z"/>
+          </svg>
+          20-30 minutes Telehealth only</p>
+        <dl class="space-y-3 my-3 max-w-[400px]">
+          <div class="flex items-baseline gap-3">
+            <dt class="flex-1">In-home visit</dt>
+            <dd class="w-22 text-center shrink-0 px-4 py-2 bg-white rounded-xl">N/A</dd>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <dt class="flex-1">Telehealth</dt>
+            <dd class="w-22 text-center shrink-0 px-4 py-2 bg-white rounded-xl">$60</dd>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <dt class="flex-1">Medicare Rebate</dt>
+            <dd class="w-22 text-center shrink-0 px-4 py-2 bg-white rounded-xl">$53</dd>
+          </div>
+        </dl>
       </article>
-
-      <article class="rounded-[2rem] border-2 border-warm-gray-light bg-white/70 p-8">
-        <h2 class="text-3xl">Follow-Up Care</h2>
-        <p class="mt-4 font-sans leading-8">Continue support over time with check-ins that help you adapt as feeding patterns and family needs change.</p>
-      </article>
+    </div>
+    <div class="max-w-[800px] mx-auto mt-4">
+      <p>
+        <b>Important notes:</b>
+      </p>
+      <ul class="mt-3 list-disc pl-8">
+        <li>Follow-up consultations can only be requested <b>after the initial consultation.</b></li>
+        <li>Telehealth is offered by <b>appointment only.</b></li>
+        <li><b>Free travel</b> to your home or chosen location if within 20km from Port Willunga, SA. Travelling distances over
+  20km will be charged at the current Australian Tax Office km rate.</li>
+        <li><b>Free distant support</b> via SMS and email for up to 1 week after a consultation (will respond as soon as possible).  </li>
+        <li>Your booking is confirmed upon <b>receipt of the full payment.</b></li>
+        <li>A call-out on a weekend or public holiday will attract an <b>additional fee of $60.</b></li>
+      </ul>
     </div>
   </section>
 </main>
