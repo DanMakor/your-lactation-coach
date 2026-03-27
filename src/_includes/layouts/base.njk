@@ -12,22 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   </head>
 
-  <body class="font-serif">
+  <body class="font-serif flex flex-col min-h-screen">
     {% set currentUrl = page.url or '/' %}
     <header class="bg-neutral-100 p-3">
       <div class="container mx-auto flex items-center justify-end">
         <nav aria-label="Primary navigation">
           <ul class="hidden gap-8 font-sans md:flex">
             <li>
-              <a href="/" class="font-bold transition-colors {% if currentUrl == '/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/' %}aria-current="page"{% endif %}>Welcome</a>
+              <a href="/" class="font-bold transition-colors {% if currentUrl == '/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:opacity-70{% endif %}" {% if currentUrl == '/' %}aria-current="page"{% endif %}>Welcome</a>
             </li>
             <li>
-              <a href="/services/" class="font-bold transition-colors {% if currentUrl == '/services/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/services/' %}aria-current="page"{% endif %}>Services</a>
+              <a href="/services/" class="font-bold transition-colors {% if currentUrl == '/services/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:opacity-70{% endif %}" {% if currentUrl == '/services/' %}aria-current="page"{% endif %}>Services</a>
             </li>
             <li>
-              <a href="/about/" class="font-bold transition-colors {% if currentUrl == '/about/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/about/' %}aria-current="page"{% endif %}>About Me</a>
+              <a href="/about/" class="font-bold transition-colors {% if currentUrl == '/about/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:opacity-70{% endif %}" {% if currentUrl == '/about/' %}aria-current="page"{% endif %}>About Me</a>
             </li>
-            <li><a href="/contact/" class="font-bold transition-colors {% if currentUrl == '/contact/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:text-gray-800{% endif %}" {% if currentUrl == '/contact/' %}aria-current="page"{% endif %}>Contact Me</a></li>
+            <li><a href="/contact/" class="font-bold transition-colors {% if currentUrl == '/contact/' %}text-warm-gray-light underline decoration-2 underline-offset-8{% else %}text-warm-gray hover:opacity-70{% endif %}" {% if currentUrl == '/contact/' %}aria-current="page"{% endif %}>Contact Me</a></li>
           </ul>
         </nav>
 
