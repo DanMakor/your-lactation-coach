@@ -4,7 +4,7 @@ import path from 'path';
 import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
-import { backgroundImageShortcode, imageShortcode } from './src/_includes/image.js';
+import { backgroundImageShortcode, imageShortcode, imageSmallShortcode } from './src/_includes/image.js';
 
 export default function (eleventyConfig) {
   //compile tailwind before eleventy processes the files
@@ -39,6 +39,7 @@ export default function (eleventyConfig) {
   ]);
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addNunjucksAsyncShortcode("imageSmall", imageSmallShortcode);
   eleventyConfig.addNunjucksAsyncShortcode("bgImage", backgroundImageShortcode);
 
 

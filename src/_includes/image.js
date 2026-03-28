@@ -26,6 +26,22 @@ export async function imageShortcode(src, alt = "", sizes = "100vw", classes = "
   return Image.generateHTML(metadata, imageAttributes);
 }
 
+export async function imageSmallShortcode(src, alt = "", sizes = "100vw", classes = "") {
+  if (!alt) throw new Error("Missing alt text.");
+
+  const metadata = await generateImageMetadata(src, [130, 260, 390], ["avif", "webp", "jpeg"]);
+
+  const imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+    class: classes,
+  };
+
+  return Image.generateHTML(metadata, imageAttributes);
+}
+
 export async function backgroundImageShortcode(src, baseWidth = 640) {
   const numericBaseWidth = Number(baseWidth);
   const retinaWidth = numericBaseWidth * 2;
