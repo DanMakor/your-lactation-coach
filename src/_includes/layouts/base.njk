@@ -2,10 +2,36 @@
 <html lang="en" class="bg-white text-black">
 
   <head>
+    {% set metaTitle = title or site.name %}
+    {% set metaDescription = description or 'Compassionate, evidence-based lactation support tailored to your feeding goals.' %}
+    {% set pagePath = page.url or '/' %}
+    {% set canonicalUrl = site.url + pagePath %}
+    {% set socialImagePath = socialImage or '/assets/images/logo.png' %}
+    {% set socialImageUrl = site.url + socialImagePath %}
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ description or 'Compassionate, evidence-based lactation support tailored to your feeding goals.' }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url or '/' }}">
+    <title>{{ metaTitle }}</title>
+    <meta name="description" content="{{ metaDescription }}">
+    <link rel="canonical" href="{{ canonicalUrl }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ metaTitle }}">
+    <meta property="og:description" content="{{ metaDescription }}">
+    <meta property="og:url" content="{{ canonicalUrl }}">
+    <meta property="og:image" content="{{ socialImageUrl }}">
+    <meta property="og:image:alt" content="{{ site.name }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ metaTitle }}">
+    <meta name="twitter:description" content="{{ metaDescription }}">
+    <meta name="twitter:image" content="{{ socialImageUrl }}">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+
     <link rel="stylesheet" href="/assets/styles/index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

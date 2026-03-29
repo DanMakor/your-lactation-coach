@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import sharp from 'sharp';
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
@@ -17,6 +18,30 @@ export default function (eleventyConfig) {
     const tailwindInputPath = path.resolve('./src/assets/styles/index.css');
 
     const tailwindOutputPath = './dist/assets/styles/index.css';
+
+    const faviconSourcePath = path.resolve('./src/assets/images/logo.png');
+    const faviconOutputDir = path.resolve('./dist/assets/icons');
+    if (!fs.existsSync(faviconOutputDir)) {
+      fs.mkdirSync(faviconOutputDir, { recursive: true });
+    }
+
+    const faviconSizes = [
+      { size: 16, filename: 'favicon-16x16.png' },
+      { size: 32, filename: 'favicon-32x32.png' },
+      { size: 180, filename: 'apple-touch-icon.png' },
+    ];
+
+    await Promise.all(
+      faviconSizes.map(({ size, filename }) =>
+        sharp(faviconSourcePath)
+          .resize(size, size, {
+            fit: 'contain',
+            background: { r: 255, g: 255, b: 255, alpha: 0 },
+          })
+          .png()
+          .toFile(path.join(faviconOutputDir, filename))
+      )
+    );
 
     const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
 
