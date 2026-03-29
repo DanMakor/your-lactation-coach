@@ -10,7 +10,14 @@ async function generateImageMetadata(src, widths, formats) {
   });
 }
 
-export async function imageShortcode(src, alt = "", sizes = "100vw", classes = "") {
+export async function imageShortcode(
+  src,
+  alt = "",
+  sizes = "100vw",
+  classes = "",
+  loading = "lazy",
+  fetchpriority = "auto"
+) {
   if (!alt) throw new Error("Missing alt text.");
 
   const metadata = await generateImageMetadata(src, [320, 640, 1024, 1600], ["avif", "webp", "jpeg"]);
@@ -18,15 +25,23 @@ export async function imageShortcode(src, alt = "", sizes = "100vw", classes = "
   const imageAttributes = {
     alt,
     sizes,
-    loading: "lazy",
+    loading,
     decoding: "async",
+    fetchpriority,
     class: classes,
   };
 
   return Image.generateHTML(metadata, imageAttributes);
 }
 
-export async function imageSmallShortcode(src, alt = "", sizes = "100vw", classes = "") {
+export async function imageSmallShortcode(
+  src,
+  alt = "",
+  sizes = "100vw",
+  classes = "",
+  loading = "lazy",
+  fetchpriority = "auto"
+) {
   if (!alt) throw new Error("Missing alt text.");
 
   const metadata = await generateImageMetadata(src, [130, 260, 390], ["avif", "webp", "jpeg"]);
@@ -34,8 +49,9 @@ export async function imageSmallShortcode(src, alt = "", sizes = "100vw", classe
   const imageAttributes = {
     alt,
     sizes,
-    loading: "lazy",
+    loading,
     decoding: "async",
+    fetchpriority,
     class: classes,
   };
 
