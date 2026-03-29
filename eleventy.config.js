@@ -9,6 +9,11 @@ import { backgroundImageShortcode, imageShortcode, imageSmallShortcode } from '.
 export default function (eleventyConfig) {
   //compile tailwind before eleventy processes the files
   eleventyConfig.on('eleventy.before', async () => {
+    const staleSitemapPath = path.resolve('./dist/sitemap.xml');
+    if (fs.existsSync(staleSitemapPath) && fs.statSync(staleSitemapPath).isDirectory()) {
+      fs.rmSync(staleSitemapPath, { recursive: true, force: true });
+    }
+
     const tailwindInputPath = path.resolve('./src/assets/styles/index.css');
 
     const tailwindOutputPath = './dist/assets/styles/index.css';
